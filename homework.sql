@@ -11,10 +11,6 @@
 create database iii;
 --
 
--- 使用 iii資料庫
-use iii;
---
-
 -- 新增 customs (id,cname,cphone,cemail,caddr)
 create table customs (id int primary key auto_increment,cname varchar(20),cphone varchar(20),cemail varchar(100),caddr varchar(100),unique key (cphone));
 --
