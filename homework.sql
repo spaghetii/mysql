@@ -31,7 +31,7 @@ create table products (id int primary key auto_increment,pname varchar(20),pid i
 create table orders (id int primary key auto_increment,orderid int,customid int,unique key (orderid),foreign key (customid) references customs (id));
 --
 
--- 新增 orderdetails (id,cname,cphone,cemail,caddr)
+-- 新增 orderdetails (id,orderid,productid,price,quantity)
 create table orderdetails (id int primary key auto_increment,orderid int,productid int,price int,quantity int,foreign key (orderid) references orders (id),foreign key (productid) references products (id));
 --
 
